@@ -1,0 +1,59 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="container">
+			 	<div class="jumbotron text-center">
+			 		<img src="/assets/img/brgrpic.png" class="burgerPic" alt="">
+			 		<img src="/assets/img/brgr2.png" class="burgerPic" alt="">
+			 		<img src="/assets/img/brgr3.png" class="burgerPic" alt="">
+			    	<h1>Burger Glutton</h1> 
+			    	<p>A list to track my shame.</p>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FORM FOR ADDING BURGERS -->
+	<div class="row">
+		<form method="post" action="/newburger" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-4">
+					<input type="" class="form-control" id="burgerInput" name="burger_name" placeholder="Add Burger!">
+				</div>
+				<div class="col-sm-3">
+					<button type="submit" class="btn btn-primary">Submit Burger</button>
+				</div>
+  			</div>
+  		</form>
+	</div>
+			<!-- NEW BURGERS AND EATEN BURGERS ADDED HERE -->
+	<div class="row">
+		<div class="col-sm-offset-2 col-sm-4">
+			<div id="uneatenBurgers">
+				<ul class="listSection">
+					{{#each burgerList}} 
+					{{#unless devoured}}
+						<li class="listItemUneaten">{{item_id}}. {{burger_name}} <form method="post" action="/devoured"><button name="devoured" type="submit" class="btn btn-default" value="{{item_id}}">Devour!</button></form></li>
+					{{/unless}}
+					{{/each}}
+				<!-- USER ADDED BURGERS HERE -->
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div id="devouredBurgers">
+				<ul class="listSection">
+					{{#each burgerList}}
+					{{#if devoured}}
+						<li class="listItemEaten">{{item_id}}. {{burger_name}}</li>
+					{{/if}}
+					{{/each}}
+				<!-- USER CONSUMED BURGERS HERE -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+

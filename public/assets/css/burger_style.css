@@ -1,0 +1,57 @@
+.jumbotron h1 {
+	color: red;
+}
+
+.jumbotron {
+	background-color: #945400;
+}
+
+.jumbotron p {
+	color: #FFF50D;
+}
+
+.burgerPic {
+	height: 200px;
+	width: 200px;
+}
+
+.listSection {
+
+}
+
+.listItemUneaten {
+	position: relative;
+	border-color: #377bb5;
+	border-width: 2px;
+	border-style: solid;
+	background-color: #377bb5;
+	color: white;
+	font-size: 16px;
+	margin: 10px 0px;
+	border-radius: 8px;
+	padding: 10px 3px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.listItemUneaten button {
+	position: absolute;
+	right: 2%;
+	bottom: 9%;
+	padding-bottom: 5px;
+}
+
+.listItemEaten {
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+	background-color: #FF7363;
+	color: black;
+	font-size: 16px;
+	margin: 10px 0px;
+	border-radius: 8px;
+	padding: 10px 3px;
+}
+
